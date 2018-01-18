@@ -9,10 +9,17 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$("#testjs").click(function(e) {
+	$("#testjs").click(function(e) {i
 		$('.jumbotron h1').text("Javascript is connected");
 	});
 
+    $("a.thumbnail").click(projectClick);
+
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+}
+
+function projectClick(e){
+    e.preventDefault();
+    $(this).css("background-color", "#8fFf00");
 }
